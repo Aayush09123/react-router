@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from "react"
 import "./App.css"
+import Home from "./components/Home/Home";
+import { useRoutes } from "react-router-dom";
 
-function App() {
-
-  return (
-    <>
-      <h1 className='bg-green-600 p-4 font-semibold'>React Router</h1>
-    </>
-  )
+const App = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Home /> },
+  ])
+  return routes
 }
 
-export default App
+export default App;
